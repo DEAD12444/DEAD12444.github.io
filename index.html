@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional copywriter specializing in web copy, email marketing, and ad copy. Let’s create compelling content that drives results.">
+    <meta name="keywords" content="copywriter, web copy, email marketing, ad copy">
+    <title>Sohaib Ahmed | Professional Copywriter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            background: #0A2540;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            background: #1C3A5A;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            color: #FFD700;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('images/pexels-goumbik-574069.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 2rem;
+            background: #FFFFFF;
+            text-align: center;
+        }
+
+        .services h2 {
+            margin-bottom: 2rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            padding: 2rem;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card i {
+            font-size: 2rem;
+            color: #FFD700;
+            margin-bottom: 1rem;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 4rem 2rem;
+            background: #F8F9FA;
+            text-align: center;
+        }
+
+        .portfolio h2 {
+            margin-bottom: 2rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .portfolio-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 4rem 2rem;
+            background: #FFFFFF;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            margin-bottom: 2rem;
+        }
+
+        .testimonial {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1rem;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 2rem;
+            background: #F8F9FA;
+            text-align: center;
+        }
+
+        .about h2 {
+            margin-bottom: 2rem;
+        }
+
+        .about img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 2rem;
+            background: #0A2540;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            margin-bottom: 2rem;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #FFD700;
+            color: #0A2540;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #e6b800;
+        }
+
+        /* Footer */
+        footer {
+            background: #1C3A5A;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero, .services, .portfolio, .testimonials, .about, .contact {
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .service-grid, .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sohaib Ahmed</h1>
+        <p>Compelling Copy that Converts</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <h2>Crafting Words that Drive Action</h2>
+        <p>Professional copywriting services for businesses that want to engage audiences and boost conversions</p>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <i class="fas fa-laptop"></i>
+                <h3>Web Copy</h3>
+                <p>Persuasive website content that captures your brand voice and converts visitors</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Marketing</h3>
+                <p>Engaging email sequences that nurture leads and drive sales</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-ad"></i>
+                <h3>Ad Copy</h3>
+                <p>Attention-grabbing PPC and social media ads that deliver results</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="images/preview.jpg" alt="E-commerce product descriptions for a fashion brand">
+                <h3>E-commerce Product Descriptions</h3>
+                <p>Client: Fashion Brand</p>
+                <p>Increased conversions by 40% with compelling product copy</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="images/Infographics_004.jpg" alt="Email campaign for a SaaS company">
+                <h3>Email Campaign</h3>
+                <p>Client: SaaS Company</p>
+                <p>25% open rate and 12% click-through rate achieved</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>What Clients Say</h2>
+        <div class="testimonial">
+            <p>"Your copy increased our sales by 30%! Highly recommend!"</p>
+            <p><strong>— Client Name, Company</strong></p>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <img src="images/sohaib.jpg" alt="Sohaib Ahmed" class="profile-photo">
+        <p>Hi, I’m Sohaib Ahmed, a professional copywriter with 2 years of experience helping brands tell their stories and drive results. I specialize in Web Copy, Email Marketing and Ad Copy. Let’s create something amazing together!</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Let's Work Together</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Project Details" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+            <p id="form-message"></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sohaib Ahmed. All rights reserved.</p>
+        <p>Connect: <a href="mailto:sohaibtanoliatd@gmail.com">sohaibtanoliatd@gmail.com</a> | (+92) 319-9625641</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('form-message').textContent = 'Thank you! Your message has been sent.';
+            this.reset();
+        });
+    </script>
+</body>
+</html>
